@@ -8,7 +8,7 @@ def getAnimal():
     animal=random.choice(animals)
     return Response(animal, mimetype="text/plain")
 
-@app.route('getNoise', methods=['POST'])
+@app.route('/getNoise', methods=['POST'])
 def getNoise():
     animal = request.data.decode('utf-8')
     if animal == "Dog":
@@ -16,15 +16,15 @@ def getNoise():
     elif animal == "Cat":
         noise = "Meow!"
     elif animal == "Mouse":
-        noise = "squeak"
+        noise = "Squeak!"
     elif animal == "Horse":
-        noise = "Neigh"
+        noise = "Neigh!"
     elif animal == "Cow":
         noise = "Moo!"
     elif animal == "Sheep":
         noise = "Baa!"
     else:
-        noise = "Unkown!"
+        noise = "Unknown!"
     
     return Response(noise, mimetype='text/plain')
 

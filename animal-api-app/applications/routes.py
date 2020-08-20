@@ -6,11 +6,10 @@ import requests
 def home():
     return render_template('home.html')
 
-#Gets animal type
 @app.route('/get/animal', methods=['GET', 'POST'])
 def animal():
     animal = requests.get('http://app2:5001/getAnimal')
-    noise = requests.get('http://app2:5001/getNoise')
+    noise = requests.post('http://app2:5001/getNoise', data=animal.text)
     return render_template('result.html', animal=animal.text, noise=noise.text)
 
 
