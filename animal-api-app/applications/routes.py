@@ -14,7 +14,7 @@ def animal():
 
     animal1 = Animals(animal=animal.text, noise=noise.text)
     db.session.add(animal1)
-    db.wssion.commit()
+    db.session.commit()
 
     return render_template('result.html', animal=animal.text, noise=noise.text)
 
