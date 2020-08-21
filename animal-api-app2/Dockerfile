@@ -14,4 +14,4 @@ RUN pip3 install -r requirements.txt
 COPY . .
 
 #Command that runs app
-ENTRYPOINT ['/usr/local/bin/python3', 'app.py']
+ENTRYPOINT ["/usr/local/bin/python3", "app.py"]

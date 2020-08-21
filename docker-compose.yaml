@@ -1,12 +1,12 @@
 version: '3.7'
 services:
-    animal-api-app: 
+    app: 
       build: ./animal-api-app
       ports:
         - target: 5000
           published: 5000
           protocol: tcp
-    animal-api-app2:
+    app2:
       build: ./animal-api-app2
       ports:
         - target: 5001
