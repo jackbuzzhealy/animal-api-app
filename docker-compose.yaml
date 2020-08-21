@@ -16,8 +16,8 @@ services:
     database:
       image: mysql:5.7
       environment:
-              MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-              MYSQL_DATABASE: animal
+        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+        MYSQL_DATABASE: animal
       volumes:
         - type: volume
           source: database-volume
@@ -25,5 +25,5 @@ services:
       ports:
         - target: 3306
           published: 3306
-volume: 
+volumes: 
   database-volume:
